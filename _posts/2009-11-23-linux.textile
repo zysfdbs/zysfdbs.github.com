@@ -1,0 +1,81 @@
+---
+layout: post
+title: Linux常用命令
+category: linux
+---
+h2. 常用命令
+
+pre. 
+#执行上次命令
+!!
+
+pre. 
+#进入上次访问的目录
+cd -
+
+pre. 
+#将上一条命令中的 foo 替换为 bar，并执行
+^foo^bar
+
+pre. 
+#快速备份或复制文件
+cp filename{,.bak}
+
+pre. 
+#计算器，直接输入表达式(如1+1)会返回结果(2)
+bc
+
+h2. 系统的修改文件名和文本内的某个文字
+
+h3. 修改文件名
+
+pre. 
+#看下哪些文件中有要替换的文件名
+git status 
+#其中issue是原文件名,inspect是用于替换的文件名
+sed -i 's/issue/inspect/g' `git status | grep inspect | grep '\.' | awk '{print  $2}'`
+
+h3. 替换文本内的文字
+
+pre. 
+#查看哪些文件下有可能有要修改的文字
+ls 
+#其中Issue是原文字,Inspect是替换文字, spec是含有Issue的文件
+sed -i 's/Issue/Inspect/g' `grep -r -l Issue spec` 
+
+pre. 
+#为所有rb文件添加编码声明
+find app -iname '*.rb' | xargs sed -i '1 i\# encoding: utf-8'
+
+h2. 脚本自动启动
+
+pre. 
+sudo cp /etc/init.d/single /etc/init.d/domains
+#...修改domains的内容...
+sudo update-rc.d domains defaults
+
+h2. 进程相关
+
+pre. 
+#查看当前进程
+ps aux
+#查看当前进程树
+pstree
+
+h2. 本机信息
+
+h3. linux版本信息
+
+pre. 
+cat /etc/issue
+uname -a
+
+h3. 运行时间
+
+pre. 
+uptime
+
+h3. 显示所有用户的列表
+
+pre. 
+cat /etc/passwd | cut -f 1 -d :

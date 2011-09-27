@@ -1,0 +1,31 @@
+span.date { float: right }
+div.size  { text-align: right }
+
+article .body * {font-weight:bold;}
+article h1,h2,h3,h4,h5,h6{border:0!important;}
+article h1{font-size:170%!important;padding-top:.5em!important;}
+article h1:first-child{margin-top:0!important;padding-top:.25em!important;border-top:none!important;}
+article h2{font-size:150%!important;margin-top:1.5em!important;border-top:4px solid #e0e0e0!important;padding-top:.5em!important;color:#6D9D30;}
+article h3{margin-top:1em!important;color:#6D9D30;}
+article p{margin:1em 0!important;line-height:1.5em!important;}
+article ul{margin:1em 0 1em 1.3em!important;}
+article ul{margin-top:0!important;margin-bottom:0!important;}
+article ol{margin:1em 0 1em 1.5em!important;}
+article ol ol{margin-top:0!important;margin-bottom:0!important;}
+article blockquote{margin:1em 0!important;border-left:5px solid #ddd!important;padding-left:.6em!important;color:#555!important;}
+article dt{font-weight:bold!important;margin-left:1em!important;}
+article dd{margin-left:2em!important;margin-bottom:1em!important;}
+article table{margin:1em 0!important;}
+article table th{border-bottom:1px solid #bbb!important;padding:.2em 1em!important;}
+article table td{border-bottom:1px solid #ddd!important;padding:.2em 1em!important;}
+article pre{margin:1em 0!important;font-size:90%!important;background-color:#f8f8ff!important;border:1px solid #dedede!important;padding:.5em!important;line-height:1.5em!important;color:#444!important;overflow:auto!important;}
+article pre code{padding:0!important;font-size:100%!important;background-color:#f8f8ff!important;border:none!important;}
+article code{font-size:90%!important;background-color:#f8f8ff!important;color:#444!important;padding:0 .2em!important;border:1px solid #dedede!important;}
+article pre.console{margin:1em 0!important;font-size:90%!important;background-color:black!important;padding:.5em!important;line-height:1.5em!important;color:white!important;}
+article pre.console code{padding:0!important;font-size:100%!important;background-color:black!important;border:none!important;color:white!important;}
+article pre.console span{color:#888!important;}
+article pre.console span.command{color:yellow!important;}
+
+#blogs li { margin: 5px 0 }
+
+#github-badge img { float: left }

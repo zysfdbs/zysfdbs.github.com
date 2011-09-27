@@ -1,12 +1,127 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>{{ page.title }}</title>
-</head>
+---
+author: L.D.W
+desc: 让历史告诉未来
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    {% if page.title != null %}
+    <title>{{page.title}} | {{ page.desc }} - {{ page.author }}</title>
+    {% else %}
+    <title>{{ page.desc }} - {{ page.author }}</title>
+    {% endif %}
+    <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" charset="utf-8"/>
+    <!--[if IE]><script src="/javascripts/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <div id="wrapper"><!-- #wrapper -->
 
-<body>
-<h1>{{ page.title }}</h1>
+      <header><!-- header -->
+      <h1><a href="/">{{ page.author }}</a></h1>
+      <h2><a href="/">{{ page.desc }}</a></h2>
+      </header><!-- end of header -->
 
-{{ content }}
-</body>
+      <section id="main"><!-- #main content and sidebar area -->
+      <div id="content">
+        <article class="articlecontent">
+          {{ content }}
+        </article>
+      </div>
+
+      <aside>
+        <section>
+          <h3>Who's saberma</h3>
+          <img src="/images/saberma.jpeg"/>
+          <p>email(gtalk):<a href="mailto:ldw5258@gmail.com">ldw5258@gmail.com</a></p>
+          <p>twitter:<a href="http://twitter.com/ldw5258">twitter.com/ldw5258</a></p>
+          <p>
+            <a href="http://github.com/saberma">github</a>
+            <a href="http://www.douban.com/people/4034647/">douban</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Categories</h3>
+          <ul>
+            {% for category in site.categories %}
+            <li><a href="/{{category | first}}.html">{{category | first}} ({{category | last | size }})</a></li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section>
+          <div id="github-badge">
+          </div>
+        </section>
+        <script type="text/javascript" charset="utf-8">
+          GITHUB_USERNAME = "ldw5258";
+        </script>
+        <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
+
+      </aside>
+
+
+      <footer>
+        <section id="footer-area">
+
+          <section id="footer-outer-block">
+            <aside class="footer-segment">
+              <h4>Friends</h4>
+              <ul>
+                <li><a href="http://saberma.me">saberma博客</a></li>
+                <li><a href="http://www.55xiaoyou.com">闪记脑力[iphone益智游戏]</a></li>
+                <li><a href="http://www.sszgclub.com">甩手掌柜[多网店管理]</a></li>
+                <li><a href="http://click.union.360buy.com/JdClick/?unionId=2467&t=1&to=http://www.360buy.com" target="_blank">网购上京东[省钱又放心]</a></li>
+              </ul>
+            </aside><!-- end of #first footer segment -->
+
+            <aside class="footer-segment">
+              <h4>Blogroll</h4>
+              <ul>
+                <li><a href="http://robielee.me">小狼</a></li>
+                <li><a href="http://2simple.cn">2Simple</a></li>
+                <li><a href="http://abitno.me">A Bit? No!!!</a></li>
+                <li><a href="http://daodao.org">盗盗</a></li>
+              </ul>
+            </aside><!-- end of #second footer segment -->
+
+            <aside class="footer-segment">
+              <h4>Coolness</h4>
+              <ul>
+                <li><a href="http://xianguo.com">鲜果</a></li>
+                <li><a href="http://github.com">GitHub</a></li>
+                <li><a href="http://www.pivotaltracker.com">PivotalTracker</a></li>
+                <li><a href="http://chinaonrails.com">ChinaOnRails</a></li>
+              </ul>
+            </aside><!-- end of #third footer segment -->
+
+            <aside class="footer-segment">
+              <h4>Encourage</h4>
+              <p>尝试. 坚持. 分享. 宽容.</p>
+            </aside><!-- end of #fourth footer segment -->
+
+          </section><!-- end of footer-outer-block -->
+
+        </section><!-- end of footer-area -->
+      </footer>
+    </div><!-- #wrapper -->
+    
+    <a href="http://github.com/saberma"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://assets2.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_red_aa0000.png&path=" alt="Fork me on GitHub"></a>
+
+    <script>
+      var _gaq = [['_setAccount', 'UA-12120506-1'], ['_trackPageview']];
+      (function(d, t) {
+      var g = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = '//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+    <!-- Free template created by http://freehtml5templates.com -->
+  </body>
 </html>

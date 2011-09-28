@@ -1,0 +1,17 @@
+---
+layout: defautl
+title: Textitle 语法学习
+category: 技术基础
+---
+
+"Textitle":http://redcloth.org/hobix.com/textile/.
+
+"Google":http://google.com.
+
+I searched "Google":http://google.com.
+
+I am crazy about "Hobix":hobix
+and "it's":hobix "all":hobix I ever
+"link to":hobix!
+
+[hobix]http://hobix.com

@@ -1,0 +1,7 @@
+---
+layout: post
+title: 模拟“天宫一号”发射全过程
+category: 航空航天
+---
+
+<embed src="http://player.youku.com/player.php/sid/XMzA4MzE0Mjcy/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>

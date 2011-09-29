@@ -1,17 +1,417 @@
 ---
-layout: defautl
+layout: default
 title: Textitle 语法学习
 category: 技术基础
 ---
 
-"Textitle":http://redcloth.org/hobix.com/textile/.
+<style type="text/css">
+  BODY {
+  margin: 10px 30px;
+  }
+  TABLE {
+  font-family: georgia, serif;
+  font-size: 11pt;
+  padding: 15px;
+  }
+  TH {
+  border-bottom: solid 1px black;
+  font-size: 24pt;
+  font-weight: bold;
+  padding-top: 30px;
+  }
+  H1 {
+  font-size: 42pt;
+  }
+  H4 {
+  <!-- color: #666; -->
+  background-color: #fee;
+  border: solid 1px #caa;
+  margin: 10px 0px 5px 0px;
+  padding: 5px;
+  }
+  P {
+  margin: 10px 15px 5px 15px;
+  }
+  TD.sections {
+  background: black;
+  color: white;
+  font-family: georgia, serif;
+  font-weight: bold;
+  font-size: 9pt;
+  padding: 5px;
+  }
+  TD.sections A         { color: #CCEEFF; }
+  TD.sections A:link    { color: #CCEEFF; }
+  TD.sections A:visited { color: #CCEEFF; }
+  TD.sections A:active  { color: #EEEEEE; }
+  TD.sections A:hover   { color: #EEEEEE; }
 
-"Google":http://google.com.
+  TD.example1 PRE {
+  background-color: #B30;
+  color: white;
+  font-family: georgia, serif;
+  font-weight: bold;
+  font-size: 9pt;
+  padding: 5px;
+  }
+  TD.example2 P {
+  border: solid 1px #DDD;
+  background-color: #EEE;
+  font-family: georgia, serif;
+  font-size: 9pt;
+  padding: 5px;
+  }
+  TD.example3 {
+  border: solid 1px #EED;
+  background-color: #FFE;
+  padding: 5px;
+  }
+  .big {
+  font-size: 15pt;
+  }
+  #big-red {
+  font-size: 15pt;
+  color: red
+  }
+</style>
+    
+
+h1. 快速块修饰
+
+h2. 标题
+
+p(example). h1. Header
+h2. Header
+
+h2. Entities
+
+h2. 段落引述
+
+p(example). An old text
+bq. A block quotation.
+Any old text
+
+h2. 脚注
+
+p(example). This is covered elsewhere[1].
+This is covered elsewhere[2].
+
+
+h1. 快速短语修饰
+
+# 斜体(_)
+    I _believe_ every word.
+    I __know__.
+# 粗体(*)
+    And then? She *fell*!
+    I **really** __know__.
+# 引用(??)
+    ??Cat's Cradle?? by Vonnegut
+# 代码(@)
+    Convert with @r.to_html@
+# 删除线(-)
+    I'm -sure- not sure.
+# 插入(+)
+    You are a +pleasant+ child.
+# 下标(~)
+    log ~2~ x
+
+
+pre. I'm %{color:red}_unaware_% of most soft drinks.
+
+pre. <div style="float:right;">
+h2. %{color:blue}Sidebar%
+"Hobix":http://hobix.com/
+"Ruby":http://ruby-lang.org/
+</div>
+
+<div style="float:right;">
+
+h2. %{color:blue}Sidebar%
+"Hobix":http://hobix.com/
+"Ruby":http://ruby-lang.org/
+
+</div>
+
+The main text of the
+page goes here and will 
+stay to the left of the 
+sidebar.
+
+
+h1. 属性
+
+h2. 块属性
+
+pre. p(example1). An example
+p(#big-red). Red here
+p(example1#big-red2). Red here
+p{color:blue;margin:30px}. Spacey blue
+p[fr]. rouge
+p[sh]. # ls ~
+
+p(example1). An example
+
+p(#big-red). Red here
+
+p(example1#big-red2). Red here
+
+p{color:blue;margin:30px}. Spacey blue
+
+p[fr]. rouge
+
+p[sh]. # ls ~
+
+
+h2. 短语属性
+
+pre. I seriously *{color:red}blushed*
+when I _(big)sprouted_ that
+corn stalk from my
+%[es]cabeza%.
+
+I seriously *{color:red}blushed*
+when I _(big)sprouted_ that
+corn stalk from my
+%[es]cabeza%.
+
+h2. 块位置
+
+语法:
+
+(class)
+(#id)
+(class#id) can be combined
+{style}
+[language]
+
+pre. p<. align lef
+p>. align right
+p=. centered
+p<>. justified
+p(. left ident 1em
+p((. left ident 2em
+p))). right ident 3em    
+
+
+p<. align lef
+
+p>. align right
+
+p=. centered
+
+p<>. justified
+
+    
+p(. left ident 1em
+
+p((. left ident 2em
+
+p))). right ident 3em    
+
+
+h2. 组合位置
+
+pre. h2()>. Bingo.
+
+h3()>[no]{color:red}. Bingo
+
+        
+h2()>. Bingo.
+
+h3()>[no]{color:red}. Bingo
+
+pre. h2()>. right-aligned header 2, indented 1em both sides
+h3=. centered header 3
+!>/image.gif! right-aligned image
+p[no]{color:red}. A Norse of a different colour
+
+
+h2. 在textile中直接使用HTML标记
+
+pre. <pre>
+      <code>
+        a.gsub!( /</, '' )
+      </code>
+    </pre>
+
+    <pre>
+      <code>
+        a.gsub!( /</, '' )
+      </code>
+    </pre>
+
+pre. <div style="float:right;">
+      h3. Sidebar
+      "Hobix":http://hobix.com/
+      "Ruby":http://ruby-lang.org/
+    </div>
+
+
+
+    <div style="float:right;">
+
+h3. Sidebar
+
+      "Hobix":http://hobix.com/
+      "Ruby":http://ruby-lang.org/
+
+    </div>
+
+    The main text of the
+    page goes here and will 
+    stay to the left of the 
+    sidebar.
+
+h1. 列表
+
+h2. 数值列表
+
+<div style="float:right;">
+  
+# A first item
+# A second item
+# A third
+
+</div>
+
+pre. # A first item
+# A second item
+# A third
+
+<div style="float:right;">
+
+# Fuel could be:
+## Coal
+## Gasoline
+## Electricity
+# Humans need only:
+## Water
+## Protein
+</div>
+
+  
+pre. # Fuel could be:
+## Coal
+## Gasoline
+## Electricity
+# Humans need only:
+## Water
+## Protein
+
+
+h2. 项目符号列表
+
+pre. * A first item
+* A second item
+* A third
+    
+* A first item
+* A second item
+* A third
+
+pre. * Fuel could be:
+** Coal
+** Gasoline
+** Electricity
+* Humans need only:
+** Water
+** Protein
+    
+
+* Fuel could be:
+** Coal
+** Gasoline
+** Electricity
+* Humans need only:
+** Water
+** Protein
+
+
+
+h1. 外部引用
+
+h2. 超链接
 
 I searched "Google":http://google.com.
+
+
+h2. 链接别名
 
 I am crazy about "Hobix":hobix
 and "it's":hobix "all":hobix I ever
 "link to":hobix!
 
 [hobix]http://hobix.com
+
+h2. 图片嵌入
+
+!http://redcloth.org/hobix.com/textile/sample.jpg!
+
+!/images/textile/openwindow1.gif(Bunny.)!
+
+!/images/textile/openwindow1.gif!:http://hobix.com/
+
+
+h2. 图片位置
+
+!>/images/textile/obake.gif!
+
+And others sat all round the small
+machine and paid it to sing to them.
+
+h2. 缩略语(Acronyms)
+
+We use CSS(Cascading Style Sheets).
+
+h1. 表格
+
+| name | age | sex |
+| joan | 24 | f |
+| archie | 29 | m |
+| bella | 45 | f |
+
+
+
+|_. name |_. age |_. sex |
+| joan | 24 | f |
+| archie | 29 | m |
+| bella | 45 | f |
+
+h2. 单元格属性
+
+|_. attribute list |
+|<. align left |
+|>. align right|
+|=. center |
+|<>. justify |
+|^. valign top |
+|~. bottom |
+
+
+|\2. spans two cols |
+| col 1 | col 2 |
+
+|/3. spans 3 rows | a |
+| b |
+| c |
+
+
+
+|{background:#ddd}. Grey cell|
+
+h2. 表格和行属性
+
+
+table{border:1px solid black}.
+|This|is|a|row|
+|This|is|a|row|
+
+|This|is|a|row|
+{background:#ddd}. |This|is|grey|row|
+
+
+
+fn1. Down here, in fact.
+
+fn2. 脚注2

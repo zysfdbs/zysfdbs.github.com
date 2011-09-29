@@ -18,6 +18,7 @@ body {
     color: #333;
     font-size: 14px;
     line-height: 18px;
+    /* text-align: center; */
 }
 
 /* layout */
@@ -93,6 +94,8 @@ a:hover, a:active {
 p {
     margin-top: 10px;
     margin-bottom: 18px;
+    /* text-indent: 2em; /\*indent*\/ */
+
 }
 
 li {
@@ -296,4 +299,24 @@ footer a:hover {
 
 footer p {
     margin-top: -2px;
+}
+
+/* 源代码引用 */
+
+.example{
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+    font-size: 90%;
+    overflow:auto;
+}
+
+pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+    font-size: 90%;
+    overflow:auto;
 }

@@ -80,8 +80,14 @@ h1. 快速块修饰
 
 h2. 标题
 
-p(example). h1. Header
-h2. Header
+pre.      h1. Header
+     h2. Header
+     h1(#id). An HTML first-level heading
+     h2. An HTML second-level heading
+     h3. An HTML third-level heading
+     h4. An HTML fourth-level heading
+     h5. An HTML fifth-level heading
+     h6. An HTML sixth-level heading
 
 h2. Entities
 
@@ -107,8 +113,13 @@ h1. 快速短语修饰
     I **really** __know__.
 # 引用(??)
     ??Cat's Cradle?? by Vonnegut
-# 代码(@)
-    Convert with @r.to_html@
+# 代码(*@*)
+    Convert with @r.to_html@    
+    <code>function myTest() {
+      alert('Codeblock Example');      
+      }
+      myTest();
+    </code>
 # 删除线(-)
     I'm -sure- not sure.
 # 插入(+)
@@ -298,6 +309,18 @@ pre. # Fuel could be:
 # Humans need only:
 ## Water
 ## Protein
+
+<div style="float:right;">
+* This is a bullet
+*# this is a numbered list
+*# this is another numbered list
+* This is another bullet
+</div>
+
+pre. * This is a bullet
+*# this is a numbered list
+*# this is another numbered list
+* This is another bullet
 
 
 h2. 项目符号列表

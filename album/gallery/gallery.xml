@@ -1,0 +1,86 @@
+﻿<gallery>
+	<settings>
+		<frameSize>5</frameSize>
+		<frameColor>0x000000</frameColor>
+		<cornerRadius>7</cornerRadius>
+		<backgroundColor>0xFFFFFF</backgroundColor>
+		<initialState>Show Thumbnails</initialState>
+
+		<showCaption>Always</showCaption>
+		<captionBackgroundAlpha>41</captionBackgroundAlpha>
+		<captionBackgroundCornerRadius>6</captionBackgroundCornerRadius>
+		<buttonsBackgroundAlpha>41</buttonsBackgroundAlpha>
+		<buttonsBackgroundCornerRadius>6</buttonsBackgroundCornerRadius>
+
+		<showButtons>Always</showButtons>
+		<showAlbumsButton>true</showAlbumsButton>
+		<showThumbnailsButton>true</showThumbnailsButton>
+		<showSlideshowButton>true</showSlideshowButton>
+		<showNavigationButton>true</showNavigationButton>
+		<slideshowDelay>4</slideshowDelay>
+		<rotationDirection>Horizontal CW</rotationDirection>
+		<rotationDuration>600</rotationDuration>
+		<panelBackgroundAlpha>43</panelBackgroundAlpha>
+
+		<iconWidth>90</iconWidth>
+		<iconHeight>55</iconHeight>
+		<iconPadding>10</iconPadding>
+		<useRotation>true</useRotation>
+		<dropShadow>true</dropShadow>
+		<imageScaleMode>fill</imageScaleMode>
+
+		<overSound>sounds/over.mp3</overSound>
+		<clickSound>sounds/click.mp3</clickSound>
+	</settings>
+<albums>
+		<album icon="" thumbnailsFolder="gallery/icons/children/" imagesFolder="gallery/images/children/" description="Children">
+			<items>
+				<item source="1.jpg" description="" thumb="1.jpg"/>
+				<item source="2.jpg" description="" thumb="2.jpg"/>
+				<item source="3.jpg" description="" thumb="3.jpg"/>
+				<item source="4.jpg" description="" thumb="4.jpg"/>
+				<item source="5.jpg" description="" thumb="5.jpg"/>
+				<item source="6.jpg" description="" thumb="6.jpg"/>
+				<item source="7.jpg" description="" thumb="7.jpg"/>
+			</items>
+		</album>
+
+		<album icon="" thumbnailsFolder="gallery/icons/car/" imagesFolder="gallery/images/car/" description="Car">
+			<items>
+				<item source="1.jpg" description="" thumb="1.jpg"/>
+				<item source="2.jpg" description="" thumb="2.jpg"/>
+				<item source="3.jpg" description="" thumb="3.jpg"/>
+				<item source="4.jpg" description="" thumb="4.jpg"/>
+				<item source="5.jpg" description="" thumb="5.jpg"/>
+				<item source="6.jpg" description="" thumb="6.jpg"/>
+				<item source="7.jpg" description="" thumb="7.jpg"/>
+			</items>
+		</album>
+
+        <album icon="" thumbnailsFolder="gallery/images/mm/" imagesFolder="gallery/images/mm/" description="MM">
+			<items>
+				<item source="1.jpg" description="" thumb="1.jpg"/>
+				<item source="2.jpg" description="" thumb="2.jpg"/>
+				<item source="3.jpg" description="" thumb="3.jpg"/>
+				<item source="4.jpg" description="" thumb="4.jpg"/>
+				<item source="5.jpg" description="" thumb="5.jpg"/>
+				<item source="6.jpg" description="" thumb="6.jpg"/>
+				<item source="7.jpg" description="" thumb="7.jpg"/>
+                <item source="8.jpg" description="" thumb="8.jpg"/>
+				<item source="9.jpg" description="" thumb="9.jpg"/>
+				<item source="10.jpg" description="" thumb="10.jpg"/>
+				<item source="11.jpg" description="" thumb="11.jpg"/>
+				<item source="12.jpg" description="" thumb="12.jpg"/>
+				<item source="13.jpg" description="" thumb="13.jpg"/>
+				<item source="14.jpg" description="" thumb="14.jpg"/>
+				<item source="15.jpg" description="" thumb="15.jpg"/>		
+			</items>
+		</album>
+
+
+
+</albums>
+
+
+
+</gallery>

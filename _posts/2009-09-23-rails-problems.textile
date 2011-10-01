@@ -40,8 +40,8 @@ ldd /usr/local/ruby/lib/ruby/1.8/x86_64-linux/bigdecimal.so
 
 #找一下有没有这个文件
 find / -iname libruby.so.1.8
-# /home/saberma/ruby-1.8.7-p72/libruby.so.1.8
+# /home/username/ruby-1.8.7-p72/libruby.so.1.8
 # 在ruby的安装源码包中有这个文件，拷贝至加载路径
-cp /home/saberma/ruby-1.8.7-p72/libruby.so.1.8 /usr/lib
+cp /home/username/ruby-1.8.7-p72/libruby.so.1.8 /usr/lib
 # 再次运行script/console，一切顺利
 </pre>

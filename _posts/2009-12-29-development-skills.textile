@@ -1,4 +1,4 @@
----                                                                                                                                                          
+---
 layout: post
 title: 如何开始rails项目
 category: rails

@@ -44,7 +44,6 @@ header {
          /* curved border radius */
          moz-border-radius: 10px;
          webkit-border-radius: 10px;
-
          }
 
 #main {
@@ -91,6 +90,7 @@ a:hover, a:active {
                     }
 
 p {
+    text-indent:2em;
     margin-top: 10px;
     margin-bottom: 18px;
     }

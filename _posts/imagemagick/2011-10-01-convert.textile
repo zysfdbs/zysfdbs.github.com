@@ -1,0 +1,20 @@
+---
+layout: post
+title: 用ImageMagick批量修改图片大小
+category: imagemagick
+---
+
+
+假如当前目录放的就是所有这些图片
+
+1. 保持长宽比例，高度都变为256:
+
+pre. for jpgfile in `ls` ; do convert $jpgfile -resize x256 new_$jpgfile ; done
+
+2. 长宽都放缩为原来的50%
+
+pre. for jpgfile in `ls` ; do convert $jpgfile -resize %50 new_$jpgfile ; done
+
+比如，原来是256x256的图标，现在改为128x128的图票改如何写？像下面这样吗？
+
+pre. for jpgfile in `ls` ; do convert $jpgfile -resize 128x128 new_$jpgfile ; done

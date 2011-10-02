@@ -1,0 +1,22 @@
+---
+layout: post
+title: 用jekyll生成网站地图
+category: 技术基础
+---
+
+h1. jekyll 插件: sitemap.xml生成器
+
+sitemap.xml 生成器的作用是遍历网站所有页面生成sitemap.xml文件。
+
+用法：
+
+# 将附件中的文件拷贝到jekyll工程下_plugins文件夹中；
+# 将SITEMAP_FILE_NAME的值改为你的域名；
+# 如果想改变sitemap.xml的文件名，修改SITEMAP_FILE_NAME的值；
+# 修改PAGES_INCLUDE_POSTS值，它表示页面列表，每个页面包含了文章的链接。每次生成的sitemap.xml时更新文章的最后修改时间；
+# 运行命令： @jekyll --server@ 重新生成网站；
+# 在_site文件夹中生成sitemap.xml.
+
+"附件":http://www.kinnetica.com/downloads/jekyll_sitemap_generator.zip
+
+原谅地址:"http://www.kinnetica.com/projects/jekyll-sitemap-generator/":http://www.kinnetica.com/projects/jekyll-sitemap-generator/

@@ -1,0 +1,7 @@
+---
+layout: post
+title: Modern Lady?
+category: 怪现状
+---
+
+p{align:center}. <embed src="http://player.youku.com/player.php/sid/XMzA2OTUxMzQw/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>

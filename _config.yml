@@ -1,7 +1,12 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title
-server: true
+regeneration: true
+lsi: true
 exclude: README.textile Rakefile
+tag_title_prefix: 'Tag: '
+base_url: http://localhost:4000
+title: ldw5258
 post_types:
-  - portfoli
+  - portfolio
+server: true

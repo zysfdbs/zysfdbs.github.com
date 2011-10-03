@@ -1,4 +1,39 @@
 ---
 layout: default
+body: blog single-post
 ---
-{% include post.html %}
+<div id="content">
+  <div class="post">
+	<div class="post-meta">
+	  <span class="date"><img src="/images/icons/ico_calendar.png" alt="" />{{ page.date | date_to_string }} | </span>
+	  <span class="num-comments"><img src="/images/icons/ico_comments_sm.png" alt=""><a href="#comments">(<span class="responses-number">0</span>)</a> | </span>
+	  <span class="categories"><img src="/images/icons/ico_drawer.png" alt="" />
+		Category: <a href="/categories/{{ page.category | replace:' ', '-' | downcase  }}">{{ page.category }}</a>
+	  </span>
+	</div>
+	<h1 class="post-title"><a href="#">{{ page.title }}</a></h1>
+    <span class='date'>{{page.date | date: "%Y-%m-%d"}}</span>
+    <div class='body'>{{ content }}</div>
+  </div>
+  <div class="nextprev clearfix">
+	<a class="prev" href="{{ page.previous.url }}"><span>{{ page.previous.title }}</span><br/>&larr; Previous Entry</a>
+	<a class="next" href="{{ page.next.url }}"><span>{{ page.next.title }}</span><br/>Next Entry &rarr;</a>
+  </div>
+  <div class="related-posts section">
+	<h3 class="uppercase-title">Related Posts</h3>
+	<ol>
+	  {% for post in site.related_posts limit:5 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ol>
+  </div><!-- end: related-posts -->
+  
+  {% include post.html %}
+</div><!-- end: #content-->
+
+<div id="sidebar">
+  {% include intro.markdown %}
+  {% include post_tags.markdown %}
+  {% include sidebar_tabs.markdown %}
+  {% include portfolio.markdown %}
+</div><!-- end: #sidebar -->

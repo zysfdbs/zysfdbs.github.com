@@ -1,0 +1,37 @@
+---
+layout: default
+body: portfolio
+title: Portfolio
+---
+<div id="content">
+	<div id="project-list">
+		{% for portfolio in page.portfolios %}
+		<div class="project">
+			<img src="/images/portfolio/{{ portfolio.slug }}/small.jpg" alt="{{ portfolio.title }}" title="{{ portfolio.title }}">
+			<div class="caption">
+				<span>{{ portfolio.type }}</span>
+				<h3>{{ portfolio.title }}</h3>
+				<p>{{ portfolio.description }}</p>
+				<a class="hover" rel="portfolio" href="/portfolio/{{ portfolio.slug }}/"><span>Click to Continue…</span></a>
+			</div>
+		</div>
+		{% endfor %}
+<!--
+		<div class="pagination">
+			<a class="prev" href="#">&larr; Previous</a><br/>
+			<a class="next" href="#">Next&rarr;</a>
+		</div>
+-->
+	</div><!-- end: #project-list -->
+</div>
+<div id="sidebar">
+	<div class="section">
+		<h2 class="section-title">My Work</h2>
+		<p>You'll find some of my latest interesting work to the left, in no particular order.</p>
+	</div>
+	<div id="sliding-container" class="section">
+		<div id="change-view">
+			Change view: <a id="full-view" href="#">Full View</a><a id="thumb-view" href="#">Thumbnail View</a>
+		</div>
+	</div>
+</div>

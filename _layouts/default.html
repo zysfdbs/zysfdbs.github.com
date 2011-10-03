@@ -1,216 +1,86 @@
----
-author: L.D.W
-desc: 让历史告诉未来
----
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    {% if page.title != null %}
-    <title>{{page.title}} | {{ page.desc }} - {{ page.author }}</title>
-    {% else %}
-    <title>{{ page.desc }} - {{ page.author }}</title>
-    {% endif %}
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen" charset="utf-8"/>
-    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" charset="utf-8"/>
-    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" charset="utf-8"/>
-    <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" charset="utf-8"/>
-    
-    <!-- A minimal Flowplayer setup to get you started -->
-  	<!-- 
-		 include flowplayer JavaScript file that does  
-		 Flash embedding and provides the Flowplayer API.
-	  -->
-	<script type="text/javascript" src="flowplayer-3.2.6.min.js"></script>
-	<!-- some minimal styling, can be removed -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/flowplayer-style.css"> -->
-    <!--[if IE]><script src="/javascripts/html5.js"></script><![endif]-->
-  </head>
-  <body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-    <div id="wrapper"><!-- #wrapper -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>	
+	<title>{{ page.title }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
 
-      <header><!-- header -->
-        <h1><a href="/">{{ page.author }}</a></h1>
-        <h2><a href="/">{{ page.desc }}</a></h2>
-      </header><!-- end of header -->
+	<meta name="robots" content="all" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="7 days" />
+	<meta name="version" content="1.0" />
+	<meta name="copyright" content="" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/style.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.1.css" type="text/css">
 
-      <nav><!-- top nav -->
-        <div class="menu">
-          <ul>
-            <li><a href="/">首页</a></li>
-            <li><a href="/blogs.html">文章列表</a></li>
-            <li><a href="/about.html">关于我</a></li>
-            <li><a href="/album/">相册</a></li> 
-          </ul>
-        </div>
-      </nav><!-- end of top nav -->
+	<!-- Javascript -->
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/fancybox/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
+	<script src="/js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+	<script src="/js/ui.tabs.min.js" type="text/javascript"></script>
+	<script src="/js/jquery.cycle.js" type="text/javascript"></script>
+	<script src="/js/scripts.js" type="text/javascript"></script>
 
-      <section id="main"><!-- #main content and sidebar area -->
-        <div id="content">
-          <article class="articlecontent">
-            {{ content }}
-          </article>
-        </div>
+	<!--[if IE 6]>
+	<link href="/css/ie.css" rel="stylesheet" media="screen" type="text/css" />
+	<![endif]-->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-8668344-3']);
+			_gaq.push(['_trackPageview']);
 
-        
-        <aside>
-          <section>
-            <h3><center>Who's L.D.W</center></h3>
-            <center><img src="/images/ldw5258.jpg"/></center>
-            <p>email(gtalk):<a href="mailto:ldw5258@gmail.com">ldw5258@gmail.com</a></p>
-            <p>twitter:<a href="http://twitter.com/ldw5258">twitter.com/ldw5258</a></p>
-            <p>
-              <a href="http://github.com/ldw5258">github</a>
-              <a href="http://www.douban.com/people/ldw5258/">豆瓣</a>
-              <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="20"
-                      codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
-                <param name="movie" value="singlemp3player.swf?showDownload=false" />
-                <param name="wmode" value="transparent" />
-                <embed wmode="transparent" width="150" height="20" src="singlemp3player.swf?showDownload=false"
-                       type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-              </object>
-            </p>
-          </section>
+			(function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+	</script>
+</head>
+<body class="{{ page.body }}">
+	<div id="header-wrapper">
+		<div id="header">
+			<h1>
+				<a id="logo" href="/" title="昨夜西风凋碧树">昨夜西风凋碧树</a>
+			</h1>
+			{% include navigation.markdown %}
+		</div><!-- end: #header -->
+	</div><!-- end: #header-wrapper-->
+	<div id="content-wrapper">
+		<div id="breadcrumb">
+			<a href="/">Home</a> &not; {% if page.category != null %}<a href="/categories/{{ page.category | replace:' ', '-' | downcase }}">{{ page.category }}</a> &not; {% endif %}{% if page.is_portfolio != null %}<a href="/portfolio/">Portfolio</a> &not; {% endif %}
+		</div>
+		<div id="main-container" class="clearfix">
+			{{ content }}
+		</div><!-- end: #main-container -->
+	</div><!-- end: #content-wrapper -->
+	{% include footer.markdown %}
+	<script type="text/javascript">
+		if ($('#disqus_thread').length) {
+			var disqus_shortname = 'josediazgonzalez'; // required: replace example with your forum shortname
+			var disqus_identifier = '{{ page.url }}';
+			var disqus_url = '{{ site.base_url }}{{ page.url }}';
+			var disqus_title = '{{ page.title }}';
 
-          <!-- <section> -->
-          <!--   <h3>flowplayer</h3> -->
-		  <!--   <\!-- this A tag is where your Flowplayer will be placed. it can be anywhere -\-> -->
-		  <!--   <a -->
-		  <!-- 	 href="http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv" -->
-		  <!-- 	 style="display:block;width:200px;height:170px" -->
-		  <!-- 	 id="player"> -->
-		  <!--   </a> -->
-	      
-		  <!--   <\!-- this will install flowplayer inside previous A- tag. -\-> -->
-		  <!--   <script> -->
-		  <!-- 	flowplayer("player", "flowplayer-3.2.7.swf"); -->
-		  <!--   </script> -->
-          <!-- </section> -->
-          
-          <section>
-            <!-- Feedsky FEED发布代码开始 -->
-            <!-- FEED自动发现标记开始 -->
-            <link title="RSS 2.0" type="application/rss+xml" href="http://feed.feedsky.com/ldw5258" rel="alternate" />
-            <!-- FEED自动发现标记结束 -->
-            <a href="http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_sub_c1s17_d.gif" alt="feedsky" vspace="2"  style="margin-bottom:3px" ></a><br />
-            <a href="http://www.zhuaxia.com/add_channel.php?url=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_zhuaxia.gif" alt="&#25235;&#34430;" vspace="2" style="margin-bottom:3px" ></a><br />
-            <a href="http://www.rojo.com/add-subscription?resource=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_rojo.gif" alt="Rojo" vspace="2" style="margin-bottom:3px" ></a><br />
-            <a href="http://fusion.google.com/add?feedurl=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_google.gif" alt="google reader" vspace="2" style="margin-bottom:3px" ></a><br />
-            <a href="http://add.my.yahoo.com/rss?url=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_yahoo.gif" alt="my yahoo" vspace="2" style="margin-bottom:3px" ></a><br />
-            <a href="http://www.xianguo.com/subscribe.php?url=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_xianguo.gif" alt="&#40092;&#26524;" vspace="2" style="margin-bottom:3px" ></a><br />
-            <a href="http://9.douban.com/reader/subscribe?url=http://feed.feedsky.com/ldw5258"><img border="0" src="http://img.feedsky.com/images/icon_subshot01_douban.gif" alt="&#20061;&#28857;" vspace="2" style="margin-bottom:3px" ></a><br />
-            <!-- Feedsky FEED发布代码结束 -->
-          </section>
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 
-          <section>
-            <h3>Categories</h3>
-            <ul>
-              {% for category in site.categories %}
-              <li><a href="/categories/{{category | first}}.html">{{category | first}} ({{category | last | size }})</a></li>
-              {% endfor %}
-            </ul>
-          </section>
-
-          <section>
-            <embed src="http://player.youku.com/player.php/sid/XMzAyMDI5MzYw/v.swf" quality="high" width="210" height="195" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
-          </section>
-
-          <section>
-            <form method="get" action="http://www.google.com/search" target="_blank"> 
-              <div style="border:0px solid black;padding:1px;width:15em;">
-                <table style="border:0px solid red;padding:0">
-                  <tr><td>
-                      <a href="https://www.google.com" target="_blank">
-                        <img src="/images/google.gif" border="0"></a></td></tr>
-                  <tr><td align="right">
-                      <input style="border:0px" type="text"   name="q" size="20"
-                             maxlength="255" value="" />
-                      <input type="submit" value="Google Search" /></td></tr>
-                  <tr><td align="center" style="font-size:75%">
-                      <input type="checkbox"  name="sitesearch"
-                             value="www.github.com" /> only search <code>www.github.com</code><br />
-                      <!-- value="www.github.com" checked /> only search www.github.com<br /> -->
-                </td></tr></table>
-              </div> 
-            </form>
-          </section>
-
-          <section>
-            <div id="github-badge">
-            </div>
-          </section>
-
-          <script type="text/javascript" charset="utf-8">
-            GITHUB_USERNAME = "ldw5258";
-          </script>
-          <script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
-          
-
-        </aside>
-
-      </section>
-
-      <footer>
-        <section id="footer-area">
-
-          <section id="footer-outer-block">
-            <aside class="footer-segment">
-              <h4>Friends</h4>
-              <ul>
-                <li><a href="http://www.w3school.com.cn/index.html">领先的 Web 技术教程</a></li>
-                <li><a href="http://www.cssrain.cn/demo/bbs.html">jQuery 学习笔记</a></li>
-                <li><a href="http://msdn.microsoft.com/en-US/library/7df54s3x%28v=VS.80%29.aspx" target="_blank">MSDN-C++模板标准库</a></li>
-                <li><a href="http://en.cppreference.com/w/cpp" target="_blank">C++ referencex</a></li>
-                <li><a href="http://www.latex-project.org/" target="_blank">LaTeX – A document preparation system</a></li>
-
-              </ul>
-            </aside><!-- end of #first footer segment -->
-
-            <aside class="footer-segment">
-              <h4>Blogroll</h4>
-              <ul>
-                <li><a href="http://blog.sina.com.cn/skyinwell">井底望天博客</a></li>
-                <li><a href="http://kyle.xlau.org/">Kylexlau</a></li>
-                <li><a href="http://www.zhmjzk.com/index.aspx">民间智库网</a></li>
-                <li><a href="http://abitno.me">A Bit? No!!!</a></li>
-              </ul>
-            </aside><!-- end of #second footer segment -->
-
-            <aside class="footer-segment">
-              <h4>Coolness</h4>
-              <ul>
-                <li><a href="http://xianguo.com">鲜果</a></li>
-                <li><a href="http://github.com">GitHub</a></li>
-                <li><a href="http://www.pivotaltracker.com">PivotalTracker</a></li>
-                <li><a href="http://chinaonrails.com">ChinaOnRails</a></li>
-              </ul>
-            </aside><!-- end of #third footer segment -->
-
-            <aside class="footer-segment">
-              <h4>Encourage</h4>
-              <p>尝试. 坚持. 分享. 宽容.</p>
-            </aside><!-- end of #fourth footer segment -->
-
-          </section><!-- end of footer-outer-block -->
-
-        </section><!-- end of footer-area -->
-      </footer>
-    </div><!-- #wrapper -->
-    
-    <a href="http://github.com/ldw5258"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://assets2.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_red_aa0000.png&path=" alt="Fork me on GitHub"></a>
-
-    <script>
-      var _gaq = [['_setAccount', 'UA-12120506-1'], ['_trackPageview']];
-      (function(d, t) {
-      var g = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-      g.async = true;
-      g.src = '//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g, s);
-      })(document, 'script');
-    </script>
-    <!-- Free template created by http://freehtml5templates.com -->
-  </body>
+				var commentCount = setInterval(function() {
+					if ($('#dsq-num-posts').length) {
+						$('.responses-number').html($('#dsq-num-posts').html());
+						clearInterval(commentCount);
+					}
+				}, 1000);
+			})();
+		}
+	</script>
+</body>
 </html>

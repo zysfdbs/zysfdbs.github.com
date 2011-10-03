@@ -1,0 +1,34 @@
+/* IE6 Stylesheet */
+
+/*Nav*/
+#nav ul li {width:1%;}
+#nav ul li a:link,#nav ul li a:visited {line-height:70px; border-top:0; display:block;}
+#nav ul.dropdown li a:link, #nav ul li ul li a:visited {width:150px;}
+#nav ul.dropdown {border:0}
+
+/*Sidebar Schtuff*/
+#sidebar #selected-work {display:inline-block;}
+#blog-stats,#ads {height:1%;}
+
+/*Next Prev Buttons*/
+a.btn-prev:link,
+a.btn-prev:visited, 
+a.btn-next:link,
+a.btn-next:visited {color:#fff;}
+.grey-prev span.arrow-prev {display:none;}
+.grey-next span.arrow-next {display:none;}
+a.btn-prev span.arrow-prev {display:none;}
+a.btn-next span.arrow-next {display:none;}
+
+/*Core*/
+.section {height:1%;}
+#content {overflow:hidden;}
+
+/*Full Width Post*/
+body.full-width #content .post .pull1left,
+body.full-width #content .post .pull2left,
+body.full-width #content .post .pull1right,
+body.full-width #content .post .pull2right { display: inline; }
+/*Portfolio*/
+.project {overflow:hidden;}
+.related-projects ul li a {height:1%;}

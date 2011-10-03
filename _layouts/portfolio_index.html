@@ -1,0 +1,40 @@
+---
+layout: default
+body: portfolio single-project
+---
+<div id="content">
+	{% if page.images and page.images != empty %}
+	<div class="hgroup"> 
+		<h4 class="small-title">{{ page.type }}</h4>
+		<h1>{{ page.title }}</h1> 
+	</div>
+	<div id="project-slider">
+		<a id="lightbox" href="#"></a>
+		<ul class="slides">
+			{% for image in page.images %}
+			<li><img src="/images/portfolio/{{ page.slug }}/{{ image }}" /></li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
+	<div class="project-content">
+		{{ content }}
+	</div>
+	<!-- end: project-content -->
+	<div class="project-details">
+		<dl>
+			<dt>Client: </dt>
+			<dd>{{ page.client }}</dd>
+			<dt>Year: </dt>
+			<dd>{{ page.year }}</dd>
+			<dt>Role: </dt>
+			<dd>{{ page.role }}</dd>
+		</dl>
+		<h3 class="uppercase-title">I Worked on:</h3>
+		<ul class="worked-on">
+			{% for work in page.worked %}
+				<li>{{ work }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div><!-- end: #content-->

@@ -1,7 +1,7 @@
-destination: ./_site
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title
 server: true
-auto:        true
-lsi:         false
-server_port: 4000
-pygments:    true
-permalink:   date
+exclude: README.textile Rakefile
+post_types:
+  - portfoli

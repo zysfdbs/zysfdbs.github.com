@@ -1,0 +1,18 @@
+---
+layout: post
+title: 五月五忆屈原
+category: 会同天下
+---
+
+!/images/会同天下/屈原.jpeg!
+
+今日是端午，也是屈原祭日，刚才看了老朋友的诗文，有感也作一文。
+
+
+p{text-align:center;font-weight:bold;font-size:31px}. 五月五忆屈原
+弹指沧桑数千年，春秋战国尽云烟。
+世道人心处处险，富国强兵步步难。
+落魄忠臣随逝水，失魂强楚归九天。
+富贵名灭不胜记，倜傥之人独称焉。
+
+p{text-align:center}. 会同天下2008年6月8日

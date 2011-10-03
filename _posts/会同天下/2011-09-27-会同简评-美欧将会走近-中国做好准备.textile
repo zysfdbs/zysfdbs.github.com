@@ -7,15 +7,12 @@ category: 会同天下
 
 从2008年欧没金融危机开始以来，为了币权的霸权，美元设计了精心的圈套，让欧元去钻。欧元也也意识到这个问题的可怕，但是过度的贪婪和自信，终于让欧元一步一步的走进了这个套。
 
+
 就像当初在美元艰难的时候，欧元猴急般的上位。因为它知道，那是一个好机会，是一个在美元和欧元斗争中占得上风的好机会，欧元想抓住；同时欧元也深深的知道，如果不能在世界货币美元和欧元你少我多或者我少你多的零和游戏甚至因为还有势力在其中的负数游戏中，不能快速的站稳脚跟，那么，一旦世界经济二次探底，就会出现强者通吃，弱者出局的局面。 *而所谓的二次探底，无论出于经济发展的原因还是因为掠夺控制的原因，是必然出现的。这既是经济规律使然，更是社会规律使然。是经济之战，也是人心之战。*
 
 正因为欧元知道这里面的利害关系，知道自己虚弱的地方，不仅欧元没有抗衡美元的实力，而且盲目扩张的的欧盟，吞下了太多消化不良的国家，看似越来越大，却也越来越臃肿，越笨重。
 
- 
-
-可是，知道怎么回事，却未必能做到。过度的贪婪，不照顾到俄罗斯和中国的利益，没有中俄的配合，2008年，欧元不能撼动美元，以后也不可能。
-
- 
+可是，知道怎么回事，却未必能做到。过度的贪婪，不照顾到俄罗斯和中国的利益，没有中俄的配合，200八[1]年，欧元不能撼动美元，以后也不可能。
 
 喘过了一口大气的美元，早已经看到了欧元外强中干华而不实的本质，利比亚战争欧元的强行起跳，从战略上是完全正确的，但是，因为实力的原因和 -的- 加上中俄的冷眼旁观，诡异的利比亚战争反而固化了欧元的骄横，膨胀了欧元的信心，这恰恰是美元需要的，美元需要的是时间和中俄欧协调上出现不一致，辛辛苦苦的利比亚战争掩护了美元无声息的进攻。
 
@@ -27,7 +24,7 @@ category: 会同天下
 
 期望欧元勇敢的战斗下去，应该是高估了欧洲佬的团结和斗志，被高福利惯坏了的欧洲佬坚持不了很久了。
 
- 
+
 
 * 第一：如果开始让利向中俄妥协寻求支持，那么美欧的币权战争就会告一段落，在美元的进攻计划中，不应该有这此(次)就彻底击溃欧元的打算，欧元被严重削弱应该是个可以达到的合理目标。那么，心有余悸也好，心有不甘也好，欧洲会在痛苦的权衡后，开始走近。
 * 第二：没有出息的欧元彻底的向美元投降，这是个小概率的事件，因为欧元可以通过让步妥协来换欧元不被彻底击溃，就是欧元局部的投降，来配合美国的经济政策，这是个大概率的事件。当然美国愿意接受欧元的局部投降是因为在这个过程中，欧元一定会引入中俄的力量来平衡。这样美欧还是会走近。
@@ -37,3 +34,15 @@ category: 会同天下
 所以，下一步，伴随美元对欧元的进攻进入尾声，美欧的走近已经是必然的事了，美欧较量后的走近，对中国来说，意味困难会更大， *中国关注的重点就是，经济和地缘* 。
 
 --
+
+fn1. 奇了，这里的数字"8"会致使jekyll出现如下错误:
+    /var/lib/gems/1.8/gems/classifier-1.3.3/lib/classifier/lsi.rb:189:in `sort_by': comparison of Float with Float failed (ArgumentError)
+	from /var/lib/gems/1.8/gems/classifier-1.3.3/lib/classifier/lsi.rb:189:in `proximity_array_for_content'
+	from /var/lib/gems/1.8/gems/classifier-1.3.3/lib/classifier/lsi.rb:238:in `find_related'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/post.rb:170:in `related_posts'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/post.rb:185:in `render'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/site.rb:193:in `render'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/site.rb:192:in `each'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/site.rb:192:in `render'
+	from /home/git.repository/jekyll/bin/../lib/jekyll/site.rb:40:in `process'
+	from /home/git.repository/jekyll/bin/jekyll:250
